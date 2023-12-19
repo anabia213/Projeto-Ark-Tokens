@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ARK Tokens - Dashboard</title>
+    <link rel="stylesheet" href="css/dashboard.css">
+    <link rel="shortcut icon" href="/Images/logo.png" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp" rel="stylesheet">
+</head>
+<body>
+    <div id="loading">
+        <div class="spinner"></div>
+    </div>
+    <!-- COMEÇO DA NAVBAR -->
+    <nav>
+        <div class="container">
+            <a href="index.html">
+                <img src="Images/logo.png" class="logo">
+            </a>
+            <div class="search-bar">
+                <span class="material-icons-sharp">search</span>
+                <input type="search" placeholder="Pesquisar...">
+            </div>
+            <div class="profile-area">
+                <div class="theme-btn">
+                    <span class="material-icons-sharp active">light_mode</span>
+                    <span class="material-icons-sharp">dark_mode</span>
+                </div>
+                <div class="profile">
+                    <div class="profile-photo">
+                        <img src="Images/man.png">
+                    </div>
+                    <div class="logged-status">
+                        <div id="logado"></div>
+                        <div id="saldo"></div>
+                    </div>
+                </div>
+                <button id="menu-btn">
+                    <span class="material-icons-sharp">menu</span>
+                </button>
+            </div>
+        </div>
+    </nav>
+    <!-- FIM DA NAVBAR -->
+
+    <!-- COMEÇO DA MAIN -->
+    <main>
+        <!-- COMEÇO DO ASIDE -->
+        <aside>
+            <button id="close-btn">
+                <span class="material-icons-sharp">close</span>
+            </button>
+
+            <div class="sidebar">
+
+                <a href="dashboard.html">
+                    <span class="material-icons-sharp">grid_view</span>
+                    <h4>Dashboard</h4>
+                </a>
+
+                <a href="trade.html" class="active">
+                    <span class="material-icons-sharp">currency_exchange</span>
+                    <h4>Troca</h4>
+                </a>
+                
+                <a href="#">
+                    <span class="material-icons-sharp">account_balance_wallet</span>
+                    <h4>Carteira</h4>
+                </a>
+
+                <a href="#">
+                    <span class="material-icons-sharp">history</span>
+                    <h4>Transações</h4>
+                </a>
+
+                <a href="#">
+                    <span class="material-icons-sharp">pie_chart</span>
+                    <h4>Análises</h4>
+                </a>
+
+                <a href="#">
+                    <span class="material-icons-sharp">notifications</span>
+                    <h4>Notificações</h4>
+                </a>
+
+                <a href="#">
+                    <span class="material-icons-sharp">help</span>
+                    <h4>Central de Ajuda</h4>
+                </a>
+
+                <a href="#">
+                    <span class="material-icons-sharp">settings</span>
+                    <h4>Configurações</h4>
+                </a>
+
+            </div>
+            <!-- FIM DA SIDEBAR -->
+            <div class="updates">
+                <span class="material-icons-sharp">privacy_tip</span>
+                <h4>Dica de Segurança</h4>
+                <p>Evite ser roubado!</p>
+                <p>Deslogue ao finalizar</p>
+                <a href="#" onclick="sair()">Deslogar</a>
+            </div>
+        </aside>
+        <!-- FIM DO ASIDE -->
+
+        <!-- COMEÇO DO MEIO -->
+        <section class="middle">
+            <div class="header">
+                <h1>Visão Geral</h1>
+                <input type="number" id="saldoInput" placeholder="Valor...">
+                <button id="adicionarSaldoBtn">
+                    <span class="material-icons-sharp">pix</span> 
+                    <h5>Depositar</h5>
+                </button>
+            </div>
+
+            <div class="cards">    
+                <div class="card">
+                    <div class="top">
+                        <div class="left">
+                            <img src="dashboard-assets/images/BTC.png">
+                            <h2>BTC</h2>
+                        </div>
+                        <img src="dashboard-assets/images/visa.png" class="right">
+                    </div>
+                    <div class="middle">
+                        <h1 id="quantidadeBitcoin">0</h1>
+                        <div class="chip">
+                            <img src="dashboard-assets/images/card chip.png">
+                        </div>
+                    </div>
+                    <div class="bottom">
+                        <div class="left">
+                            <small>Cartão Virtual</small>
+                            <h5>BITCOIN</h5>
+                        </div>
+                        <div class="right">
+                            <div class="expiry">
+                                <small>Vencimento</small>
+                                <h5>02/28</h5>
+                            </div>
+                            <div class="cvv">
+                                <small>CVV</small>
+                                <h5>123</h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            
+                <!-- FIM DO CARD 1 -->
+            
+                <div class="card">
+                    <div class="top">
+                        <div class="left">
+                            <img src="dashboard-assets/images/ETH.png">
+                            <h2>ETH</h2>
+                        </div>
+                        <img src="dashboard-assets/images/master card.png" class="right">
+                    </div>
+                    <div class="middle">
+                        <h1>R$00,00</h1>
+                        <div class="chip">
+                            <img src="dashboard-assets/images/card chip.png">
+                        </div>
+                    </div>
+                    <div class="bottom">
+                        <div class="left">
+                            <small>Cartão Virtual</small>
+                            <h5>ETHEREUM</h5>
+                        </div>
+                        <div class="right">
+                            <div class="expiry">
+                                <small>Vencimento</small>
+                                <h5>02/28</h5>
+                            </div>
+                            <div class="cvv">
+                                <small>CVV</small>
+                                <h5>456</h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            
+                <!-- FIM DO CARD 2 -->
+            
+                <div class="card">
+                    <div class="top">
+                        <div class="left">
+                            <img src="dashboard-assets/images/EURO.png">
+                            <h2>EUR</h2>
+                        </div>
+                        <img src="dashboard-assets/images/visa.png" class="right">
+                    </div>
+                    <div class="middle">
+                        <h1>R$00,00</h1>
+                        <div class="chip">
+                            <img src="dashboard-assets/images/card chip.png">
+                        </div>
+                    </div>
+                    <div class="bottom">
+                        <div class="left">
+                            <small>Cartão Virtual</small>
+                            <h5>EURO</h5>
+                        </div>
+                        <div class="right">
+                            <div class="expiry">
+                                <small>Vencimento</small>
+                                <h5>02/28</h5>
+                            </div>
+                            <div class="cvv">
+                                <small>CVV</small>
+                                <h5>789</h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            
+                <!-- FIM DO CARD 3 -->
+            </div>
+            <!-- FIM DOS CARDS -->
+
+            <div class="monthly-report">
+                
+                <div class="report">
+                    <h3>Saldo</h3>
+                    <div>
+                        <details>
+                            <!-- <h1>R$1642,056</h1> -->
+                            <div class="saldo2"></div>
+                            <h6 class="success">+10.48%</h6>
+                        </details>
+                        <p class="text-muted">Comparado ao último mês</p>
+                    </div>
+                </div>
+
+                <div class="report">
+                    <h3>Lucros</h3>
+                    <div>
+                        <details>
+                            <h1>R$120,056</h1>
+                            <h6 class="success">+5.8%</h6>
+                        </details>
+                        <p class="text-muted">Comparado ao último mês.</p>
+                    </div>
+                </div>
+
+                <div class="report">
+                    <h3>Perdas</h3>
+                    <div>
+                        <details>
+                            <h1>R$143,056</h1>
+                            <h6 class="warning">-3.4%</h6>
+                        </details>
+                        <p class="text-muted">Comparado ao último mês.</p>
+                    </div>
+                </div>
+
+                <div class="report">
+                    <h3>Cashback</h3>
+                    <div>
+                        <details>
+                            <h1>R$12,056</h1>
+                            <h6 class="danger">-2.9%</h6>
+                        </details>
+                        <p class="text-muted">Referente ao saldo em conta.</p>
+                    </div>
+                </div>
+            
+            </div>
+            <!-- FIM DOS REPORTS -->
+            <!-- FIM DOS PAGAMENTOS RAPIDOS -->
+
+            <!-- CANDLESTICKS CHART -->
+            <div id="chart">
+                <div class="dashboard-container">
+                    <h2 id="titulo">Troca de Criptomoedas</h2>
+                
+                    <div class="form-group">
+                        <label for="criptoSelect">Selecione a criptomoeda:</label>
+                        <select id="criptoSelect" class="input-field">
+                            <option value="bitcoin">Bitcoin</option>
+                            <option value="ethereum">Ethereum</option>
+                            <option value="litecoin">Litecoin</option>
+                            <option value="solana">Solana</option>
+                            <option value="bitcoin-cash">Bitcoin Cash</option>
+                            <option value="cardano">Cardano</option>
+                        </select>
+                    </div>
+                
+                    <div class="form-group">
+                        <label for="quantidadeInput">Quantidade:</label>
+                        <input type="number" placeholder="Digite a quantia..." class="input-field" id="quantidadeInput" min="0" step="0.01" />
+                    </div>
+                
+                    <button id="trocarBtn">Trocar</button>
+                
+                    <div class="saldo-necessario-container">
+                        <span>Saldo necessário:</span><br>
+                        <span id="saldoNecessario"></span>
+                    </div>
+                </div>
+            </div>
+            <!-- CANDLESTICKS CHART FIM -->
+
+        </section>
+        <!-- FIM DO MEIO -->
+
+        <!-- COMEÇO DA DIREITA -->
+        <section class="right">
+            <div class="investments">
+                <div class="header">
+                    <h2>Destaques</h2>
+                    <a href="#">Mais <span class="material-icons-sharp">chevron_right</span></a>
+                </div>
+
+                    <div class="investment">
+                        <img src="dashboard-assets/images/avalanche.png">
+                        <h4>AVAX</h4>
+                        <div class="date-time">
+                            <p>10, Jun, 2023</p>
+                            <small class="text-muted">20:10pm</small>
+                        </div>
+                        <div class="bonds">
+                            <p>266</p>
+                            <small class="text-muted">Sell</small>
+                        </div>
+                        <div class="amount">
+                            <h4>R$1513,000</h4>
+                            <small class="success">+6,27%</small>
+                        </div>
+                    </div>
+        
+                    <div class="investment">
+                        <img src="dashboard-assets/images/shiba.png">
+                        <h4>SHIB</h4>
+                        <div class="date-time">
+                            <p>09, Jun, 2023</p>
+                            <small class="text-muted">16:19pm</small>
+                        </div>
+                        <div class="bonds">
+                            <p>5687</p>
+                            <small class="text-muted">Buy</small>
+                        </div>
+                        <div class="amount">
+                            <h4>R$1819.985</h4>
+                            <small class="success">+10,42%</small>
+                        </div>
+                    </div>
+        
+                    <div class="investment">
+                        <img src="dashboard-assets/images/doge.png">
+                        <h4>DOGE</h4>
+                        <div class="date-time">
+                            <p>08, Jun, 2023</p>
+                            <small class="text-muted">12:47pm</small>
+                        </div>
+                        <div class="bonds">
+                            <p>212</p>
+                            <small class="text-muted">Sell</small>
+                        </div>
+                        <div class="amount">
+                            <h4>R$151,000</h4>
+                            <small class="danger">-11,19%</small>
+                        </div>
+                    </div>
+        
+                    <div class="investment">
+                        <img src="dashboard-assets/images/polkadot.png">
+                        <h4>DOT</h4>
+                        <div class="date-time">
+                            <p>08, Jun, 2023</p>
+                            <small class="text-muted">11:10am</small>
+                        </div>
+                        <div class="bonds">
+                            <p>120</p>
+                            <small class="text-muted">Sell</small>
+                        </div>
+                        <div class="amount">
+                            <h4>R$165,120</h4>
+                            <small class="danger">-3,27%</small>
+                        </div>
+                    </div>
+
+                </div>
+            <!-- FIM DOS INVESTIMENTOS -->
+
+            <div class="recent-transactions">
+                <div class="header">
+                    <h2>Transações</h2>
+                    <a href="#">Mais <span class="material-icons-sharp">chevron_right</span></a>
+                </div>
+
+                <div class="transaction">
+                    <div class="service">
+                        <div class="icon bg-primary-light">
+                            <span class="material-icons-sharp primary">sports_esports</span>
+                        </div>
+                        <div class="details">
+                            <h4>Blizzard</h4>
+                            <p>10.06.2023</p>
+                        </div>
+                    </div>
+                    <div class="card-details">
+                        <div class="card bg-warning">
+                            <img src="dashboard-assets/images/visa.png">
+                        </div>
+                        <div class="details">
+                            <p>*5478</p>
+                            <small class="text-muted">BTC Cartão Virtual</small>
+                        </div>
+                    </div>
+                    <h4 class="danger">-R$32</h4>
+                </div>
+
+                <div class="transaction">
+                    <div class="service">
+                        <div class="icon bg-success-light">
+                            <span class="material-icons-sharp success">graphic_eq</span>
+                        </div>
+                        <div class="details">
+                            <h4>Spotify</h4>
+                            <p>09.06.2023</p>
+                        </div>
+                    </div>
+                    <div class="card-details">
+                        <div class="card bg-purple">
+                            <img src="dashboard-assets/images/visa.png">
+                        </div>
+                        <div class="details">
+                            <p>*6841</p>
+                            <small class="text-muted">EUR Cartão Virtual</small>
+                        </div>
+                    </div>
+                    <h4 class="danger">-R$20</h4>
+                </div>
+
+                <div class="transaction">
+                    <div class="service">
+                        <div class="icon bg-danger-light danger">
+                            <span class="material-icons-sharp">movie</span>
+                        </div>
+                        <div class="details">
+                            <h4>Netflix</h4>
+                            <p>09.06.2023</p>
+                        </div>
+                    </div>
+                    <div class="card-details">
+                        <div class="card bg-dark">
+                            <img src="dashboard-assets/images/master card.png">
+                        </div>
+                        <div class="details">
+                            <p>*3247</p>
+                            <small class="text-muted">ETH Cartão Virtual</small>
+                        </div>
+                    </div>
+                    <h4 class="danger">-R$40</h4>
+                </div>
+
+                <div class="transaction">
+                    <div class="service">
+                        <div class="icon bg-purple-light purple">
+                            <span class="material-icons-sharp">sports_esports</span>
+                        </div>
+                        <div class="details">
+                            <h4>SquareEnix</h4>
+                            <p>07.06.2023</p>
+                        </div>
+                    </div>
+                    <div class="card-details">
+                        <div class="card bg-warning">
+                            <img src="dashboard-assets/images/visa.png">
+                        </div>
+                        <div class="details">
+                            <p>*5478</p>
+                            <small class="text-muted">BTC Cartão Virtual</small>
+                        </div>
+                    </div>
+                    <h4 class="danger">-R$33</h4>
+                </div>
+
+                <div class="transaction">
+                    <div class="service">
+                        <div class="icon bg-success-light success">
+                            <span class="material-icons-sharp">shopping_cart</span>
+                        </div>
+                        <div class="details">
+                            <h4>Amazon</h4>
+                            <p>02.06.2023</p>
+                        </div>
+                    </div>
+                    <div class="card-details">
+                        <div class="card bg-dark">
+                            <img src="dashboard-assets/images/master card.png">
+                        </div>
+                        <div class="details">
+                            <p>*3247</p>
+                            <small class="text-muted">ETH Cartão Virtual</small>
+                        </div>
+                    </div>
+                    <h4 class="danger">-R$15</h4>
+                </div>
+
+                <div class="transaction">
+                    <div class="service">
+                        <div class="icon bg-primary-light primary">
+                            <span class="material-icons-sharp">message</span>
+                        </div>
+                        <div class="details">
+                            <h4>Discord</h4>
+                            <p>05.06.2023</p>
+                        </div>
+                    </div>
+                    <div class="card-details">
+                        <div class="card bg-purple">
+                            <img src="dashboard-assets/images/visa.png">
+                        </div>
+                        <div class="details">
+                            <p>*6841</p>
+                            <small class="text-muted">EUR Cartão Virtual</small>
+                        </div>
+                    </div>
+                    <h4 class="danger">-R$25</h4>
+                </div>
+
+                <!-- FIM DA TRANSAÇÃO -->
+
+            </div>
+            <!-- FIM DAS TRANSAÇÕES -->
+        </section>
+        <!-- FIM DA DIREITA -->
+    </main>
+    <!-- FIM DA MAIN -->
+
+    <!-- SCRIPTS JS -->
+    <script src="js/quantidadeCriptos.js"></script>
+    <script src="js/loading.js"></script>
+    <script src="js/dashboard.js"></script>
+    <script src="js/trade.js"></script>
+    <script src="js/darkThemeDashboard.js"></script>
+    <script src="js/navbarToggle.js"></script>
+</body>
+</html>

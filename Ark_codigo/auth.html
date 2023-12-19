@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <title>ARK Tokens - Autenticação</title>
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="css/forms.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="shortcut icon" href="Images/logo.png" type="image/x-icon">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   </head>
+<body>
+  <div class="container">
+    <input type="checkbox" id="flip">
+    <div class="cover">
+      <div class="front">
+        <img src="Images/front.jpg" alt="">
+        <div class="text">
+          <span class="text-1">Invista com a facilidade <br> e simplicidade que</span>
+          <span class="text-2">só a ARK pode oferecer!</span>
+        </div>
+      </div>
+    </div>
+    <div class="forms">
+        <div class="form-content">
+          <div class="login-form">
+            <div class="title">Logar</div>
+          <form action="#">
+            <div class="input-boxes">
+              
+              <div class="input-box">
+                <i id="iconLoginEmail" class="fas fa-envelope"></i>
+                <input type="text" id="loginEmail" placeholder="Insira seu e-mail" autocomplete="off" required>
+              </div>
+              <div id="loginEmailDiv"></div>
+
+              <div class="input-box">
+                <i id="iconLoginSenha" class="fas fa-lock"></i>
+                <input type="password" id="loginSenha" placeholder="Insira sua senha" autocomplete="off" minlength="8"  required>
+              </div>
+              <div id="loginSenhaDiv"></div>
+
+              <div class="text"><a href="#">Precisa de ajuda?</a></div>
+              <div class="button input-box">
+                <input onclick="entrar()" type="submit" value="Entrar">
+              </div>
+              <div id="msgErroLogin"></div>
+              <div id="msgSucessoLogin"></div>
+
+              <div class="text sign-up-text">Não tem uma conta? <label for="flip">Cadastre-se</label></div>
+            </div>
+        </form>
+      </div>
+        <div class="signup-form">
+          <div class="title">Cadastro</div>
+        <form id="formCadastro" action="#">
+            <div class="input-boxes">
+              <div class="input-box">
+                <i id="iconUser" class="fas fa-id-card"></i>
+                <input type="text" id="cadLogin" placeholder="Insira seu usuário" autocomplete="off" maxlength="60" onkeypress="return /^[a-zA-Z\s]*$/i.test(event.key)" required>
+              </div>
+              <div id="UserCadDiv"></div>
+
+              <div class="input-box">
+                <i id="iconEmail" class="fas fa-envelope"></i>
+                <input type="email" id="cadEmail" oninput="validate(this.value);" placeholder="Insira seu e-mail" autocomplete="off" required>
+              </div>
+              <div id="EmailCadDiv"></div>
+              
+              <div class="input-box">
+                <i id="iconNome" class="fas fa-user-tag"></i>
+                <input type="text" id="cadNome" placeholder="Insira seu nome" autocomplete="off" maxlength="60" onkeypress="return /^[a-zA-Z\s]*$/i.test(event.key)" required>
+              </div>
+              <div id="NomeCadDiv"></div>
+
+              <div class="input-box">
+                <i id="iconSenha" class="fas fa-lock"></i>
+                <input type="password" id="cadSenha" placeholder="Insira sua senha" autocomplete="off" minlength="8" required>
+              </div>
+              <div id="SenhaCadDiv"></div>
+
+              <div class="input-box">
+                <i id="iconDois" class="fas fa-lock"></i>
+                <input type="password" id="cadSenhaDois" placeholder="Confirme sua senha" autocomplete="off" minlength="8" required>
+              </div>
+              <div id="SenhaDoisCadDiv"></div>
+
+              <div class="button btn-primary input-box">
+                <input onclick="cadastrar()" type="submit" value="Cadastrar">
+              </div>
+              <div id="Success"></div>
+              <div id="Error"></div>
+
+              <div class="text sign-up-text">Já tem uma conta? <label for="flip">Entre agora</label></div>
+            </div>
+      </form>
+    </div>
+    </div>
+    </div>
+  </div>
+</body>
+  <script src="js/validacoes.js"></script>
+</html>

@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ARK Tokens - Compre e Venda Criptoativos!</title>
+
+  <!-- >
+    - favicon
+  -->
+  <link rel="shortcut icon favicon" href="./assets/images/logo.png" type="image">
+
+  <!-- 
+    - custom css link
+  -->
+  <link rel="stylesheet" href="./css/contato.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <!-- 
+    - google font link
+  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+
+
+
+  <!-- SCRIPTS DE ENVIO DE EMAIL -->
+
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+  <script type="text/javascript">
+      (function() {
+          // https://dashboard.emailjs.com/admin/account
+          emailjs.init('5UGGeaiSFIKOc41qm');
+      })();
+  </script>
+
+  <!-- SCRIPTS DE ENVIO DE EMAIL -->
+
+
+
+</head>
+
+<body>
+
+  <!-- 
+    - #HEADER
+  -->
+
+  <header class="header" data-header>
+    <div class="container">
+
+      <a href="index.html" class="logo">
+        <img id="logo" src="./assets/images/logo.png" width="48" height="48" alt="ARK Tokens">
+        ARK Tokens
+      </a>
+
+      <nav class="navbar" data-navbar>
+        <ul class="navbar-list">
+
+          <li class="navbar-item">
+            <a href="index.html" class="navbar-link" data-nav-link>Início</a>
+          </li>
+
+          <li class="navbar-item">
+            <a href="trade.html" class="navbar-link" data-nav-link>Compre Criptos</a>
+          </li>
+
+          <li class="navbar-item">
+            <a href="mercado.html" class="navbar-link" data-nav-link>Mercado</a>
+          </li>
+
+          <li class="navbar-item">
+            <a href="sobre.html" class="navbar-link" data-nav-link>Sobre</a>
+          </li>
+
+          <li class="navbar-item">
+            <a href="contato.html" class="navbar-link active" data-nav-link>Contato</a>
+          </li>
+
+        </ul>
+      </nav>
+
+      <button class="nav-toggle-btn" aria-label="Toggle menu" data-nav-toggler>
+        <span class="line line-1"></span>
+        <span class="line line-2"></span>
+        <span class="line line-3"></span>
+      </button>
+      <a href="auth.html" id="minhaConta" class="btn btn-outline">Minha Conta</a>
+      <div id="botaoLogado"></div>
+    </div>
+  </header>
+  <section id="section1">
+    <h1>Entre em Contato</h1>
+    <span class="decoration"></span>
+  </section>
+  <section id="section2">
+    <div class="section-colum1">
+      <div class="textsection">
+
+        <h1>Tire Suas Dúvidas</h1>
+        <span id="decoration2"></span>
+
+
+        <form id="contact-form">
+          <div class="name-form">
+            <label for="name">Nome</label>
+            <input type="text" id="name" name="user_name" required>
+          </div>
+          <div class="email-form">
+            <label for="email">E-mail</label>
+            <input type="text" id="email" name="user_email" required>
+          </div>
+          <div class="mensage-form">
+            <label for="mensagem">Mensagem</label>
+            <textarea name="message" id="message" cols="30" rows="8" required></textarea>
+          </div>
+          <button id="button1" value="Send" type="submit">ENVIAR MENSAGEM</button>
+        </form>
+
+
+      </div>
+    </div>
+    <div class="section-colum2">
+      <div class="textsection2">
+        <h1>Dados de contato</h1>
+        <span id="decoration2"></span>
+        <ul>
+          <li>contato@arktokens.com</li>
+          <li>facebook.com/arktokens</li>
+          <li>instagram.com/arktokens</li>
+          <li>youtube.com/arktokens</li>
+          <li>linkedin.com/company/arktokens</li>
+        </ul>
+        <p>CNPJ: 34.008.227/0001-03</br>
+          Rua Pascoal Sava da Feira, 316</br>
+           Bangu - Rio de Janeiro </br>
+            CEP: 21820-030 </p>
+      </div>
+    </div>
+  </section>
+  <section id="section3">
+    <div class="perguntasfrequentes">
+      <h1 id="perguntas">Perguntas Frequentes</h1>
+      <span class="decoration"></span>
+    </div>
+    <div class="textperguntas">
+      <div class="listcolum1">
+        <ul id="liststyle">
+          <li>
+            <h3>Qual a diferença entre NFTs e criptomoedas?</h3>
+            <p>A principal diferença entre NFT e criptomoeda é que as criptomoedas são consideradas ativos fungíveis. Dessa forma, podem ser substituídos por outros de mesma espécie, qualidade e quantidade, além de poderem ainda serem fracionadas, o que não ocorre com os NFTs.</p>
+          </li>
+          <li>
+            <h3>O que são NFTs</h3>
+            <p>NTF é a sigla em inglês para tokens não-fungíveis, uma categoria de criptomoedas focada em ativos únicos e exclusivos, conforme afirma Tasso Lago, gestor de fundos privados em criptomoedas e fundador da Financial Move. “Por exemplo, existem várias notas de R$ 10, então é algo fungível, replicável. Um token não-fungível é algo único, irreplicável. Assim surgiu a febre de NFTs, dando origem a coleções que valem hoje milhões de dólares”, diz.</p>
+          </li>
+          <li>
+            <h3>NTFs podem ser usados como um investimento?</h3>
+            <p>Sim. O NFT pode se valorizar e ser vendido por um preço maior, gerando receita ao dono do ativo. Mas, para Felipe Veloso, economista e fundador da Cripto Mestre, quem quiser comprar NFTs pensando em retorno financeiro deve ficar atento ao valor que o token traz ao portador.</p>
+          </li>
+        </ul>
+      </div>
+      <div class="listcolum2">
+        <ul id="liststyle">
+          <li>
+            <h3>Quais os riscos?</h3>
+            <p>Por serem ativos negociados digitalmente, o investidor precisa tomar cuidado com a segurança digital das transações e das plataformas. Nicolas Farto, especialista em renda variável da Renova Invest, alerta para os sites falsos, chamados de phishings, e para o Catfish, nome dado aos golpes aplicados na internet por meio de perfis que fingem ser outra pessoa.</p>
+          </li>
+          <li>
+            <h3>Por que tantos famosos estão interessados em NFTs?</h3>
+            <p>Para Andrey Nousi, CFA e fundador da Nousi Finance, a atenção recebida pelos NFTs é natural, já que se trata de um mercado novo e que começou a despontar dando lucros exorbitantes em algumas das coleções. A entrada de famosos no mercado ajuda a dar ainda mais relevância.</p>
+          </li>
+          <li>
+            <h3>Quais as perspectivas de crescimento do mercado de NFT?</h3>
+            <p>Até quem não gosta das artes digitais precisa reconhecer o tamanho da onda em torno dos NTFs. Mas será que o mercado tem um real potencial de crescimento? Para Rocelo Lopes, especialista em blockchain e CEO da Smartpay, sim e muito.</p>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+  <!-- 
+    - #FOOTER
+  -->
+
+  <footer class="footer">
+
+    <div class="footer-top" data-section>
+      <div class="container">
+
+        <div class="footer-brand">
+
+          <a href="#" class="logo">
+            <img src="./assets/images/logo.png" width="50" height="50" alt="ARK Tokens">
+            ARK Tokens
+          </a>
+
+          <h2 class="footer-title">Vamos conversar! 💬</h2>
+
+          <a href="tel:+5521999541468" class="footer-contact-link">📞 +55 (21) 99954-1468</a>
+
+          <a href="mailto:atendimento@arktokens.com" class="footer-contact-link">📩 atendimento@arktokens.com</a>
+
+          <address class="footer-contact-link">
+            📌 Campo Grande, Rio de Janeiro
+          </address>
+
+        </div>
+
+        <ul class="footer-list">
+
+          <li>
+            <p class="footer-list-title">Produtos</p>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">Criptomoedas</a>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">NFTs</a>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">Carteira</a>
+          </li>
+
+        </ul>
+
+        <ul class="footer-list">
+
+          <li>
+            <p class="footer-list-title">Serviços</p>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">Compre Criptos</a>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">Mercados</a>
+          </li>
+
+          <li>
+            <a href="#sectionApp" class="footer-link">ARK T. Mobile</a>
+          </li>
+
+          <li>
+            <a href="https://www.coinbase.com/pt/converter" target="_blank" class="footer-link">Conversor</a>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">Perfil</a>
+          </li>
+
+        </ul>
+
+        <ul class="footer-list">
+
+          <li>
+            <p class="footer-list-title">Suporte</p>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">Contato</a>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">Aprenda</a>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">Central de Ajuda</a>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">Feedback</a>
+          </li>
+
+        </ul>
+
+        <ul class="footer-list">
+
+          <li>
+            <p class="footer-list-title">Sobre Nós</p>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">Sobre a ARK</a>
+          </li>
+
+          <li>
+            <a href="https://github.com/anabia213" target="_blank" class="footer-link">Ana Beatriz C.</a>
+          </li>
+
+          <li>
+            <a href="https://github.com/pameladinizp" class="footer-link">Pâmela Diniz</a>
+          </li>
+
+        </ul>
+
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="container">
+
+        <p class="copyright">
+          &copy; 2023 ARK Tokens todos os direitos reservados à <a href="https://github.com/anabia213" target="_blank" class="copyright-link">Ana Beatriz C.</a>
+        </p>
+
+        <ul class="social-list">
+
+          <li>
+            <a href="#" class="social-link">
+              <ion-icon name="logo-facebook"></ion-icon>
+            </a>
+          </li>
+
+          <li>
+            <a href="#" class="social-link">
+              <ion-icon name="logo-twitter"></ion-icon>
+            </a>
+          </li>
+
+          <li>
+            <a href="#" class="social-link">
+              <ion-icon name="logo-instagram"></ion-icon>
+            </a>
+          </li>
+
+          <li>
+            <a href="#" class="social-link">
+              <ion-icon name="logo-linkedin"></ion-icon>
+            </a>
+          </li>
+
+        </ul>
+
+      </div>
+    </div>
+
+  </footer>
+
+
+
+
+
+  <!-- 
+    - custom js link
+  -->
+  <script src="./assets/js/script.js" defer></script>
+  <script src="js/contact.js"></script>
+  <script src="js/profile.js"></script>
+
+
+  <!-- 
+    - ionicon link
+  -->
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+</body>
+
+</html>
